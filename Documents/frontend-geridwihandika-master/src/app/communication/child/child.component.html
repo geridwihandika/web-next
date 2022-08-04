@@ -1,0 +1,23 @@
+<div class ="container">
+    <form class="card p-3 mt-5 mb-5">
+        <h2 class="text-center">List Message</h2>
+        <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">No</th>
+                <th scope="col">Name</th>
+                <th scope="col">Message</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let message of listMessage; let i = index ">
+                <th scope="row"> {{i+1}} </th>
+                <td> {{message.name}} </td>
+                <td> {{message.message}} </td>
+                <td> <button type="button" class="btn btn-primary" (click)="sendMessage(1)">Send</button></td>
+              </tr>
+            </tbody>
+          </table>
+    </form>
+</div>

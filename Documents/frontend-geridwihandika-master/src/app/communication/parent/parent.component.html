@@ -1,0 +1,22 @@
+<div class="container">
+    <form [formGroup]="formMessage" class="card p-3 mt-5 mb-5">
+        <h3 class="text-center">Form Send Pesan</h3>
+        <div class="mb-3">
+            <label for="" class="form-label">Nama</label>
+            <input formControlName="name" type="text" class="form-control" id="" placeholder="" [class.is-invalid]="formMessage.controls['name'].invalid && 
+            formMessage.controls['name'].touched">
+            <div class=" invalid-feedback" *ngIf="formMessage.controls['name'].hasError('required')"
+                class="invalid-feedback">Nama harus diisi</div>
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label">Message</label>
+            <input formControlName="message" type="text" class="form-control" id="" placeholder="" [class.is-invalid]="formMessage.controls['message'].invalid &&
+            formMessage.controls['message'].touched">
+            <div class=" invalid-feedback" *ngIf="formMessage.controls['message'].hasError('required')"
+                class="invalid-feedback">Pesan harus diisi</div>
+        </div>
+        <button (click)="sendMessage()" [disabled]="formMessage.invalid" type="button" class="btn btn-primary">Send</button>
+    </form>
+    <br>
+    <app-child [messageFromParent]="messageToChild"(messageToParent)="acceptMessage($event)" > </app-child>
+</div>

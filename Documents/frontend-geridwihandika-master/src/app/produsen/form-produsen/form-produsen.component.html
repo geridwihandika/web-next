@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="card p-3 mt-3">
+      <h3 class="text-center">Tambah Produsen</h3>
+      <form [formGroup]="formProdusen">
+        <div class="mb-3">
+          <label class="form-label">Nama</label>
+          <input formControlName="nama" type="text" class="form-control">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Kode</label>
+          <input formControlName="kode" type="text" class="form-control">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Alamat</label>
+          <textarea formControlName="alamat" class="form-control"></textarea>
+        </div>
+        <button (click)="save()" type="button" [disabled]="formProdusen.invalid" class="btn btn-primary">Simpan</button>
+      </form>
+    </div>
+  </div>

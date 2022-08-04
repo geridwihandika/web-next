@@ -1,0 +1,53 @@
+<div class="container">
+    <form [formGroup]="formatDataDiri" class="row mt-5">
+        <h3 class="text-center">Formulir Data Diri</h3>
+        <div class="mb-3">
+            <label for="" class="form-label">Nama</label>
+            <input
+                [class.is-invalid]="formatDataDiri.controls['nama'].invalid && formatDataDiri.controls['nama'].touched"
+                formControlName="nama" type="text" class="form-control" id="" placeholder="">
+            <div class=" invalid-feedback" *ngIf="formatDataDiri.controls['nama'].hasError('required')"
+                class="invalid-feedback">Nama harus diisi</div>
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label">Umur</label>
+            <input
+                [class.is-invalid]="formatDataDiri.controls['umur'].invalid && formatDataDiri.controls['umur'].touched"
+                formControlName="umur" type="number" class="form-control" id="" placeholder="">
+            <div class=" invalid-feedback" *ngIf="formatDataDiri.controls['umur'].hasError('required')"
+                class="invalid-feedback">umur harus diisi</div>
+            <div class=" invalid-feedback" *ngIf="formatDataDiri.controls['umur'].hasError('min')"
+                class="invalid-feedback">umur minimal 10</div>
+            <div class=" invalid-feedback" *ngIf="formatDataDiri.controls['umur'].hasError('max')"
+                class="invalid-feedback">umur maksimal 70 </div>
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label">noTelp</label>
+            <input
+                [class.is-invalid]="formatDataDiri.controls['noTelp'].invalid && formatDataDiri.controls['noTelp'].touched"
+                formControlName="noTelp" type="number" class="form-control" id="" placeholder="">
+            <div class=" invalid-feedback" *ngIf="formatDataDiri.controls['noTelp'].hasError('required')"
+                class="invalid-feedback">no telp harus di isi </div>
+            <div class=" invalid-feedback" *ngIf="formatDataDiri.controls['umur'].hasError('minlength')"
+                class="invalid-feedback">no telp minimal 12 </div>
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label">Email</label>
+            <input
+                [class.is-invalid]="formatDataDiri.controls['email'].invalid && formatDataDiri.controls['email'].touched"
+                formControlName="email" type="text" class="form-control" id="" placeholder="">
+                <div class=" invalid-feedback" *ngIf="formatDataDiri.controls['email'].hasError('required')"
+                class="invalid-feedback">email harus di isi </div>
+                <div class=" invalid-feedback" *ngIf="formatDataDiri.controls['email'].hasError('email')"
+                class="invalid-feedback">email harus benar </div>
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label">Alamat </label>
+            <input
+                [class.is-invalid]="formatDataDiri.controls['alamat'].invalid && formatDataDiri.controls['alamat'].touched"
+                formControlName="alamat" type="text" class="form-control" id="" placeholder="">
+
+        </div>
+        <button [disabled]="formatDataDiri.invalid" class="btn btn-primary">tampilkan</button>
+    </form>
+</div>

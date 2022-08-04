@@ -1,0 +1,29 @@
+<div class="container">
+    <form [formGroup]="formCount" class="row mt-5">
+        <div class="col">
+
+            <div class="row">
+                <label class="" class="form-label">penjumlahan</label>
+                <input fromControlName="maksimal" type="number" class="form-control" id="" placeholder="">
+            </div>
+        </div>
+
+        <div class="col">
+
+            <label for="" class="form-label">pengurangan</label>
+            <input formControlName="minimal" type="number" class="form-control" id="" placeholder="">
+        </div>
+
+    </form>
+    <div class="card rounded text-center  bg-dark mt-5 ">
+        <h2 class=" text-white bg-succes m-3 rounded" style="font-size: 200px">{{count}}</h2>
+        <div class="ml-3 mr-3 mb-3">
+
+
+            <button (click)="pengurangan(formCount.controls['minimal'].value)" class="btn btn-primary btn-lg m-1"
+                style="width: 48%; font-size: 50px">-</button>
+            <button (click)="penjumlahan()" class="btn btn-secondary btn-lg m-1"
+                style="width:48%; font-size: 50px">+</button>
+        </div>
+    </div>
+</div>

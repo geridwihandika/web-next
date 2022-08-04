@@ -1,0 +1,25 @@
+.produk {
+  background: -webkit-linear-gradient(#000000, #000000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "MADE TOMMY";
+}
+
+.table-custom {
+  background-image: linear-gradient(to right, #0088ef, #38f4af 100%);
+  color: white;
+}
+
+.body-custom {
+  background: -webkit-linear-gradient(#0088ef, #38f4af);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "MADE TOMMY";
+}
+
+.btn {
+  background-image: linear-gradient(to right, #0088ef, #38f4af 100%);
+  font-family: "MADE TOMMY";
+  color: white;
+}
+
